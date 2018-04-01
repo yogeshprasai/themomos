@@ -1,0 +1,8 @@
+
+
+@media(min-width: 768px){
+    .index-page{
+        margin-top: -20%;
+        z-index: 100;
+    }
+}

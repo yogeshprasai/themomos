@@ -1,0 +1,105 @@
+<section class="box-content box-5" id="booking">
+			<div class="container">
+				<div class="row heading">
+					<div class="col-lg-12">	
+						<h2>Ordering</h2>
+						<div class="intro">We accept Credit Card, Pay Pal and Cash</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 box-item">
+						<div class="row text-center">
+							<h3>Complete the Submission Form</h3>
+							
+							<h3>Or</h3> 
+
+							<h3>Just Make a Call</h3>
+							<p>123-456-789</p>
+							<p>sunita-prasai@gmail.com</p>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<form name="form1" (ngSubmit)="onSubmit()" action="mailto:yogeshprasai@hotmail.com" enctype="text/plain">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+									<input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="email" class="form-control input-lg " name="email" id="email" placeholder="Enter email" required="required">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="form-group col-md-6 col-sm-12">
+									<label for="exampleFormControlSelect1">Food We Serve</label>
+									<select class="form-control drop-down-menu" name="selectedMomo" 
+										[(ngModel)] = "selectedMomo" (ngModelChange)="onChangeMomo($event)">
+										<option>Vegetable Momo</option>
+										<option>Vegetable C Momo</option>
+										<option>Chicken Momo</option>
+										<option>Chicken C Momo</option>
+									</select>
+								</div>
+								<div class="form-group col-md-3 col-sm-12">
+									<label for="exampleFormControlSelect1">Quantity</label>
+									<select class="form-control drop-down-menu" name="selectedMomo" 
+										[(ngModel)] = "selectedQuantity" (ngModelChange)="onChangeQuanity($event)">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group col-md-2 col-sm-12">
+									<br/>
+									<button (click) = "addMomo()" class="btn btn-primary col-md-12 col-sm-12 mt-5" 
+											style="width: 100%; height: 46px">Add</button>
+								</div>
+							</div>
+							<div class="row col-sm-12" *ngIf="shoppingList.length > 0">
+								<table class="table">
+									<caption class="medium-font">Order Lists</caption>
+									<thead>
+										<tr>
+										<th scope="col">Momo Type</th>
+										<th scope="col">Quantity</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr *ngFor="let eachShoppingItem of shoppingList">
+											<td>{{eachShoppingItem.item}}</td>
+											<td>{{eachShoppingItem.quanity}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div *ngFor="let eachMomo of momoList">
+										<div class="mt-10">
+										<span class="col-sm-6 mt-10">{{eachMomo}}</span> 
+										<span class="col-sm-6 mt-10"><button class="btn btn-danger">Delete</button></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Message</label>
+										<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required" placeholder="Message"></textarea>
+									</div>						
+									<button type="submit" class="btn btn-4 btn-block" name="btnBooking" id="btnBbooking">
+								Send Your Order</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>

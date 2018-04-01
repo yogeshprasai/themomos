@@ -1,0 +1,13 @@
+.box-content{
+    padding: 25px 0;
+}
+
+.box-content .heading{
+    margin-bottom: 10px;
+}
+
+.drop-down-menu{
+    border: 1px solid #CF000F;
+    height: 46px;
+    padding: 10px 16px;
+}

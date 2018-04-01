@@ -1,0 +1,14 @@
+.box-content{
+    padding: 25px 0;
+}
+
+.box-content .heading{
+    margin-bottom: 10px;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 500px;
+    height: auto;
+    border-radius: 50%;
+}

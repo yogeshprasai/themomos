@@ -1,0 +1,14 @@
+li{
+    list-style: none;
+    color: white;
+}
+
+.nav>li>a{
+    display: block
+}
+
+@media(max-width: 768px){
+    .wrap-footer{
+        padding: 20px 10px 20px 10px;
+    }
+}
